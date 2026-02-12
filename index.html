@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CPM Pazar</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🚗 CPM PAZAR</h1>
+
+<div class="form-box">
+  <h3>İlan Ekle</h3>
+  <input type="text" id="baslik" placeholder="Başlık">
+  <select id="kategori">
+    <option value="Arabalar">Arabalar</option>
+    <option value="Hesaplar">Hesaplar</option>
+    <option value="Oyun Parası">Oyun Parası</option>
+  </select>
+  <input type="text" id="fiyat" placeholder="Fiyat (örn: 300 TL)">
+  <button onclick="ilanEkle()">İlanı Yayınla</button>
+</div>
+
+<h3>Kategoriler</h3>
+<button onclick="filtrele('Hepsi')">Hepsi</button>
+<button onclick="filtrele('Arabalar')">Arabalar</button>
+<button onclick="filtrele('Hesaplar')">Hesaplar</button>
+<button onclick="filtrele('Oyun Parası')">Oyun Parası</button>
+
+<div id="ilanlar"></div>
+
+<!-- POPUP -->
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <h3 id="popupBaslik"></h3>
+    <p id="popupKategori"></p>
+    <p id="popupFiyat" class="fiyat"></p>
+    <button onclick="kapat()">Kapat</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
